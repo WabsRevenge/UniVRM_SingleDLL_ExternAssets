@@ -117,7 +117,11 @@ namespace UniGLTF
         {
             // Prepare
             var root = GameObject.CreatePrimitive(PrimitiveType.Cube);
+#if VRM_EXTERNAL_ASSETS
+            var mat = new Material(ExternalAssets.ShaderHelper.Find("Standard"));
+#else
             var mat = new Material(Shader.Find("Standard"));
+#endif
             mat.SetTexture(propertyName, srcTex);
             root.GetComponent<MeshRenderer>().sharedMaterial = mat;
 

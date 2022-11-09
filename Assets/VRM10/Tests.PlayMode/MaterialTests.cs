@@ -284,7 +284,7 @@ namespace UniVRM10.Test
         // public IEnumerator GetOrCreateTextureTest()
         // {
         //     var converter = new RuntimeVrmConverter();
-        //     var material = new UnityEngine.Material(Shader.Find("VRM/MToon"));
+        //     var material = new UnityEngine.Material(ExternalAssets.ShaderHelper.Find("VRM/MToon"));
         //     var srcLinearTexture = CreateMonoTexture(0.5f, 1.0f, true);
         //     var srcSRGBTexture = CreateMonoTexture(0.5f, 1.0f, false);
 

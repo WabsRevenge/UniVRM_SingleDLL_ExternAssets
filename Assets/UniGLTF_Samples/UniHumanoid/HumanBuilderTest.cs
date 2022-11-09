@@ -127,7 +127,11 @@ namespace UniHumanoid
 
                 if (m_material == null)
                 {
+#if VRM_EXTERNAL_ASSETS
+                    m_material = new Material(ExternalAssets.ShaderHelper.Find("Standard"));
+#else
                     m_material = new Material(Shader.Find("Standard"));
+#endif
                 }
                 renderer.sharedMaterial = m_material;
                 //root.gameObject.AddComponent<BoneMapping>();

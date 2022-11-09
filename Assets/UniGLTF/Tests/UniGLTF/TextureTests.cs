@@ -20,7 +20,11 @@ namespace UniGLTF
             };
             var textureExporter = new TextureExporter(new EditorTextureSerializer());
 
+#if VRM_EXTERNAL_ASSETS
+            var material = new Material(ExternalAssets.ShaderHelper.Find("Standard"));
+#else
             var material = new Material(Shader.Find("Standard"));
+#endif
             material.mainTexture = tex0;
 
             var materialExporter = new BuiltInGltfMaterialExporter();

@@ -19,8 +19,11 @@ namespace VRM
             };
 
             var textureExporter = new TextureExporter(new EditorTextureSerializer());
+#if VRM_EXTERNAL_ASSETS
+            var srcMaterial = new Material(ExternalAssets.ShaderHelper.Find("VRM/MToon"));
+#else
             var srcMaterial = new Material(Shader.Find("VRM/MToon"));
-
+#endif
             var offset = new Vector2(0.3f, 0.2f);
             var scale = new Vector2(0.5f, 0.6f);
 

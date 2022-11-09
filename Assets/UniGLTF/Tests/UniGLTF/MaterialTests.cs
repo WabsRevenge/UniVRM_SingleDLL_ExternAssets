@@ -20,7 +20,11 @@ namespace UniGLTF
             };
 
             var textureExporter = new TextureExporter(new EditorTextureSerializer());
+#if VRM_EXTERNAL_ASSETS
+            var srcMaterial = new Material(ExternalAssets.ShaderHelper.Find("Standard"));
+#else
             var srcMaterial = new Material(Shader.Find("Standard"));
+#endif
 
             var offset = new Vector2(0.3f, 0.2f);
             var scale = new Vector2(0.5f, 0.6f);
@@ -255,7 +259,11 @@ namespace UniGLTF
         [Test]
         public void MaterialExportTest()
         {
+#if VRM_EXTERNAL_ASSETS
+            var material = new Material(ExternalAssets.ShaderHelper.Find("Standard"));
+#else
             var material = new Material(Shader.Find("Standard"));
+#endif
             material.SetColor("_EmissionColor", new Color(0, 1, 2, 1));
             material.EnableKeyword("_EMISSION");
             var materialExporter = new BuiltInGltfMaterialExporter();

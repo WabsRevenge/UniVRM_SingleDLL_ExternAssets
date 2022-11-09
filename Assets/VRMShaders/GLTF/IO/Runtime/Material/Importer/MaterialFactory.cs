@@ -114,7 +114,11 @@ namespace VRMShaders
                 shaderName = fallback;
             }
 
+#if VRM_EXTERNAL_ASSETS
+            var shader = ExternalAssets.ShaderHelper.Find(shaderName);
+#else
             var shader = Shader.Find(shaderName);
+#endif
             if (shader == null)
             {
                 throw new Exception($"shader: {shaderName} not found");

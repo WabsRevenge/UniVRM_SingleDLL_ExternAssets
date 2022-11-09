@@ -122,8 +122,13 @@ namespace UniGLTF
             var data = new ExportingGltfData(50 * 1024 * 1024);
 
             var Materials = new List<Material>{
+#if VRM_EXTERNAL_ASSETS
+                new Material(ExternalAssets.ShaderHelper.Find("Standard")), // A
+                new Material(ExternalAssets.ShaderHelper.Find("Standard")), // B
+#else
                 new Material(Shader.Find("Standard")), // A
                 new Material(Shader.Find("Standard")), // B
+#endif
             };
 
             var (go, mesh) = CreateMesh(Materials.ToArray());
@@ -170,8 +175,13 @@ namespace UniGLTF
             var data = new ExportingGltfData(50 * 1024 * 1024);
 
             var Materials = new List<Material>{
+#if VRM_EXTERNAL_ASSETS
+                new Material(ExternalAssets.ShaderHelper.Find("Standard")), // A
+                new Material(ExternalAssets.ShaderHelper.Find("Standard")), // B
+#else
                 new Material(Shader.Find("Standard")), // A
                 new Material(Shader.Find("Standard")), // B
+#endif
             };
 
             var (go, mesh) = CreateMesh(Materials.ToArray());

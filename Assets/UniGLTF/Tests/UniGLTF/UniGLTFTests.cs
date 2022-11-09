@@ -539,7 +539,11 @@ namespace UniGLTF
             var go = new GameObject("same_mesh");
             try
             {
+#if VRM_EXTERNAL_ASSETS
+                var shader = ExternalAssets.ShaderHelper.Find("Unlit/Color");
+#else
                 var shader = Shader.Find("Unlit/Color");
+#endif
 
                 var cubeA = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 {

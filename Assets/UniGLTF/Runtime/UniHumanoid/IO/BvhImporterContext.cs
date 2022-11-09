@@ -118,7 +118,11 @@ namespace UniHumanoid
 
             // create SkinnedMesh for bone visualize
             var renderer = SkeletonMeshUtility.CreateRenderer(animator);
+#if VRM_EXTERNAL_ASSETS
+            Material = new Material(ExternalAssets.ShaderHelper.Find("Standard"));
+#else
             Material = new Material(Shader.Find("Standard"));
+#endif
             renderer.sharedMaterial = Material;
             Mesh = renderer.sharedMesh;
             Mesh.name = "box-man";
@@ -140,7 +144,7 @@ namespace UniHumanoid
 
             return go.transform;
         }
-        #endregion
+#endregion
 
 #if UNITY_EDITOR
         protected virtual string GetPrefabPath()
@@ -166,7 +170,7 @@ namespace UniHumanoid
             return prefabPath;
         }
 
-        #region Assets
+#region Assets
         IEnumerable<UnityEngine.Object> GetSubAssets(string path)
         {
             return AssetDatabase.LoadAllAssetsAtPath(path);
@@ -220,7 +224,7 @@ namespace UniHumanoid
 
             AssetDatabase.ImportAsset(path);
         }
-        #endregion
+#endregion
 #endif
 
         public void Destroy(bool destroySubAssets)

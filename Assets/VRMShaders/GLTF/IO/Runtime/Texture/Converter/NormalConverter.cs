@@ -11,7 +11,11 @@ namespace VRMShaders
             {
                 if (_exporter == null)
                 {
+#if VRM_EXTERNAL_ASSETS
+                    _exporter = new Material(ExternalAssets.ShaderHelper.Find("Hidden/UniGLTF/NormalMapExporter"));
+#else
                     _exporter = new Material(Shader.Find("Hidden/UniGLTF/NormalMapExporter"));
+#endif
                 }
                 return _exporter;
             }
