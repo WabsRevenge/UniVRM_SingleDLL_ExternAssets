@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32929.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CombinedVRMDll", "CombinedVRMDll.csproj", "{BAB76A3E-4C95-4687-81A6-571C554D7AA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAB76A3E-4C95-4687-81A6-571C554D7AA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB76A3E-4C95-4687-81A6-571C554D7AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB76A3E-4C95-4687-81A6-571C554D7AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB76A3E-4C95-4687-81A6-571C554D7AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABED0988-2222-4A7D-92B6-ED0E5002E920}
+	EndGlobalSection
+EndGlobal

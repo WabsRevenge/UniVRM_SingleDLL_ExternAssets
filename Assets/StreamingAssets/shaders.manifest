@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 419645026
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fb8f4a8e20b06a02812e322acdfe81c3
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 55d48f4ad9c3b13330b9eb5ee5686477
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/VRMShaders/GLTF/IO/Resources/UniGLTF/StandardMapImporter.shader
+- Assets/VRMShaders/GLTF/IO/Resources/UniGLTF/NormalMapExporter.shader
+- Assets/VRMShaders/VRM10/MToon10/Resources/VRM10/vrmc_materials_mtoon.shader
+- Assets/VRMShaders/VRM/MToon/MToon/Resources/Shaders/MToon.shader
+- Assets/VRMShaders/GLTF/UniUnlit/Resources/UniGLTF/UniUnlit.shader
+- Assets/VRMShaders/GLTF/IO/Resources/UniGLTF/StandardMapExporter.shader
+Dependencies: []
