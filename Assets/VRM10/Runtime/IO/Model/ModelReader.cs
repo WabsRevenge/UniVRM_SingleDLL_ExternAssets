@@ -79,7 +79,7 @@ namespace UniVRM10
                 if (meshGroup.Skin == null && meshGroup.Meshes.Any(mesh => mesh.MorphTargets.Count > 0))
                 {
                     // Skinning が無くて MorphTarget が有る場合に実施する
-                    var nodes = model.Nodes.Where(node => node.MeshGroup == meshGroup).ToArray();
+                    var nodes = model.Nodes.Where(node1 => node1.MeshGroup == meshGroup).ToArray();
                     if (nodes.Length != 1)
                     {
                         // throw new NotImplementedException();
