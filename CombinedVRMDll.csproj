@@ -19,7 +19,6 @@
     <Compile Remove="Assets\MToon\Editor\**" />
     <Compile Remove="Assets\MToon\Samples\**" />
     <Compile Remove="Assets\MyScripts\**" />
-    <Compile Remove="Assets\StreamingAssets\**" />
     <Compile Remove="Assets\UniGLTF\Editor\**" />
     <Compile Remove="Assets\UniGLTF\Samples~\**" />
     <Compile Remove="Assets\UniGLTF\Tests\**" />
@@ -122,6 +121,7 @@
     <None Remove=".gitignore" />
     <None Remove=".gitmodules" />
     <None Remove=".vsconfig" />
+    <None Remove="Assets\shaders" />
     <None Remove="doc.md" />
     <None Remove="LICENSE.txt" />
     <None Remove="NUnit3To2FormatConverter.py" />
@@ -129,6 +129,10 @@
     <None Remove="requirements.txt" />
     <None Remove="retag.sh" />
     <None Remove="right_latest.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\shaders" />
   </ItemGroup>
 
   <ItemGroup>
