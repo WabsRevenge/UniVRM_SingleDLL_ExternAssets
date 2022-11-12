@@ -74,6 +74,9 @@ namespace ExternalAssets
 
         public static Shader Find(string strShaderName)
         {
+            if (m_externalShaders == null)
+                ExternalAssetsHelper.Initialise();
+
             Debug.Log($"Find Shader: {strShaderName}.");
 
             Shader resultingShader = null;
@@ -101,7 +104,10 @@ namespace ExternalAssets
             if (resultingShader == null)
             {
                 resultingShader = Shader.Find(strShaderName);
-                Debug.Log($"Found Shader in Asset Database: {strShaderName}.");
+                if(resultingShader == null)
+                    Debug.Log($"Failed to find Shader in Asset Database: {strShaderName}.");
+                else
+                    Debug.Log($"Found Shader in Asset Database: {strShaderName}.");
             }
 
             return resultingShader;
